@@ -7,10 +7,10 @@ function Form(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if input is not empty
     props.onSubmit({
       id: Math.random() * 100,
       text: input,
+      isChecked: false,
     });
     setInput("");
   };

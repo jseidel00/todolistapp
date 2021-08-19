@@ -39,21 +39,28 @@ function Item({ items, checkItem, removeItem, updateItem }) {
           role={undefined}
         >
           <ListItemIcon>
-            <Checkbox edge="start" checked={item.isChecked} disableRipple />
+            <Checkbox
+              edge="start"
+              color="primary"
+              checked={item.isChecked}
+              disableRipple
+            />
           </ListItemIcon>
           <ListItemText id={item.id} primary={item.text} />
           <ListItemSecondaryAction>
-            <IconButton edge="end">
-              <DeleteForeverIcon
-                onClick={() => removeItem(item.id)}
-                className="delete-icon"
-              />
+            <IconButton
+              className="delete-icon"
+              edge="end"
+              onClick={() => removeItem(item.id)}
+            >
+              <DeleteForeverIcon />
             </IconButton>
-            <IconButton edge="end">
-              <EditIcon
-                onClick={() => setEdit({ id: item.id, value: item.text })}
-                className="edit-icon"
-              />
+            <IconButton
+              className="edit-icon"
+              edge="end"
+              onClick={() => setEdit({ id: item.id, value: item.text })}
+            >
+              <EditIcon />
             </IconButton>
           </ListItemSecondaryAction>
         </ListItem>
