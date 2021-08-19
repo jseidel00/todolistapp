@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { TextField, Button } from "@material-ui/core";
+import AddCircleIcon from "@material-ui/icons/AddCircle";
 
 function Form(props) {
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // if input is not empty
     props.onSubmit({
       id: Math.random() * 100,
       text: input,
@@ -18,17 +21,23 @@ function Form(props) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Add an item"
-        name="text"
-        className="input"
+      <TextField
+        id="outlined-basic"
+        label="Add an item"
+        variant="outlined"
         value={input}
         onChange={handleChange}
+        required={true}
       />
-      <button className="button" type="submit">
+      <Button
+        className="button"
+        type="submit"
+        variant="contained"
+        color="default"
+        startIcon={<AddCircleIcon />}
+      >
         Add item
-      </button>
+      </Button>
     </form>
   );
 }

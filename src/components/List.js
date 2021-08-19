@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Form from "./Form";
 import Item from "./Item";
-
-// Contains the Form and all the items
+import Container from "@material-ui/core/Container";
 
 function List() {
   const [items, setItems] = useState([]);
@@ -12,7 +11,7 @@ function List() {
     setItems(newItems);
   };
 
-  const checkedItems = (id) => {
+  const checkItem = (id) => {
     let updatedItems = items.map((item) => {
       if (item.id === id) {
         item.isChecked = !item.isChecked;
@@ -23,25 +22,25 @@ function List() {
   };
 
   const removeItem = (id) => {
-    const removes = [...items].filter((item) => item.id !== id);
-    setItems(removes);
+    const remainders = [...items].filter((item) => item.id !== id);
+    setItems(remainders);
   };
 
   const updateItem = (id, newValue) => {
-    setItems((prev) => prev.map((item) => (item.id === id ? newValue : item)));
+    setItems((old) => old.map((item) => (item.id === id ? newValue : item)));
   };
 
   return (
-    <div>
+    <Container maxWidth="sm">
       <h1>Joe's Todo List</h1>
       <Form onSubmit={addItem} />
       <Item
         items={items}
-        checkedItems={checkedItems}
+        checkItem={checkItem}
         removeItem={removeItem}
         updateItem={updateItem}
       />
-    </div>
+    </Container>
   );
 }
 
