@@ -32,7 +32,7 @@ function List() {
 
   return (
     <Container maxWidth="sm">
-      <h1>Joe's Todo List</h1>
+      <h1 className="title">Joe's Todo List</h1>
       <Form onSubmit={addItem} />
       <Item
         items={items}

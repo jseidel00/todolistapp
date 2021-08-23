@@ -28,6 +28,7 @@ function Form(props) {
         value={input}
         onChange={handleChange}
         required={true}
+        fullWidth
       />
       <Button
         className="button"
@@ -35,6 +36,7 @@ function Form(props) {
         variant="contained"
         color="default"
         startIcon={<AddCircleIcon />}
+        fullWidth
       >
         Add item
       </Button>
