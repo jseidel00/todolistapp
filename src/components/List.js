@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "./Form";
 import Item from "./Item";
 import Container from "@material-ui/core/Container";
+import "../App.css";
 
 function List() {
   const [items, setItems] = useState([]);
@@ -31,7 +32,7 @@ function List() {
   };
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" className="list">
       <h1 className="title">Joe's Todo List</h1>
       <Form onSubmit={addItem} />
       <Item

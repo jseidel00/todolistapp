@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@material-ui/core";
+import { TextField, Button, InputProps } from "@material-ui/core";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 
 function Form(props) {
@@ -29,6 +29,7 @@ function Form(props) {
         onChange={handleChange}
         required={true}
         fullWidth
+        InputProps={{ className: "textfield" }}
       />
       <Button
         className="button"
