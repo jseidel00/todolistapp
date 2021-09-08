@@ -52,13 +52,14 @@ function Item({ items, checkItem, removeItem, updateItem }) {
     );
   }
 
-  return (
+  return items.length ? (
     <List>
       {items.map((item, index) => (
         <ListItem
           key={index}
           onClick={() => checkItem(item.id)}
           role={undefined}
+          divider={true}
         >
           <ListItemIcon>
             <Checkbox
@@ -80,6 +81,8 @@ function Item({ items, checkItem, removeItem, updateItem }) {
         </ListItem>
       ))}
     </List>
+  ) : (
+    <p className="empty_message">Your list is empty</p>
   );
 }
 

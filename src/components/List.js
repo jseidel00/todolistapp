@@ -34,13 +34,15 @@ function List() {
   return (
     <Container maxWidth="sm" className="list">
       <h1 className="title">Joe's Todo List</h1>
-      <Form onSubmit={addItem} />
-      <Item
-        items={items}
-        checkItem={checkItem}
-        removeItem={removeItem}
-        updateItem={updateItem}
-      />
+      <div className="box">
+        <Form onSubmit={addItem} />
+        <Item
+          items={items}
+          checkItem={checkItem}
+          removeItem={removeItem}
+          updateItem={updateItem}
+        />
+      </div>
     </Container>
   );
 }
