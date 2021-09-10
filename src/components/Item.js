@@ -60,6 +60,7 @@ function Item({ items, checkItem, removeItem, updateItem }) {
           onClick={() => checkItem(item.id)}
           role={undefined}
           divider={true}
+          button
         >
           <ListItemIcon>
             <Checkbox
@@ -69,7 +70,11 @@ function Item({ items, checkItem, removeItem, updateItem }) {
               disableRipple
             />
           </ListItemIcon>
-          <ListItemText id={item.id} primary={item.text} />
+          <ListItemText
+            id={item.id}
+            primary={item.text}
+            className={`${item.isChecked ? "checked" : ""}`}
+          />
           <ListItemSecondaryAction>
             <IconButton edge="end" onClick={() => removeItem(item.id)}>
               <DeleteForeverIcon />
