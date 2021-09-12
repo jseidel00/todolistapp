@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Joe's Todo list app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a single page todo list made using React.js and Material-ui. The purpose of this project was to freshen up my skills with using these tools.
 
-## Available Scripts
+# How to run the app yourself
 
-In the project directory, you can run:
+After cloning the project, you can execute the following script to run the project locally:
 
-### `yarn start`
+```bash
+  npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Or if using yarn:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+    yarn start
+```
 
-### `yarn test`
+After which the app should automatically launch on your browser at the url `localhost:3000`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# What does this app look like?
 
-### `yarn build`
+If you don't want to run the code yourself, you can have a look at the app in action below.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Project structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+There are four main components in this project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- List.js
+- Item.js
+- Form.js
+- EditDialog.js
 
-### `yarn eject`
+I used the `App.js` file to just return the `List.js` component. The list component contains the logic for creating, updating and deleting todo items on the list. It also returns the `Form.js` and `Item.js` components. The form handles the submitting of new items and the item components utilizes a map function to list out all the items that are stored. Finally, the `EditDialog.js` component displayes the edit pop-up dialog when the edit icon is clicked on an item.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I used a combination of material-ui components and css to create the design elements for this app.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to look through my code for more information!
