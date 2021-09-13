@@ -22,7 +22,7 @@ After which the app should automatically launch on your browser at the url `loca
 
 If you don't want to run the code yourself, you can have a look at the app in action below.
 
-![todo app demo](public\todo_app_demo.gif)
+![todo app demo](public/todo_app_demo.gif)
 
 # Project structure
 
